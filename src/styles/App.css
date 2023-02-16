@@ -16,7 +16,7 @@
 .post{
     display: flex;
     padding: 15px;
-    border: 2px solid teal;
+    border: 2px solid blueviolet;
     margin-top: 15px;
     justify-content: space-between;
     align-items: center;
@@ -36,3 +36,22 @@
  opacity: 0;
   transition: opacity 500ms ease-in;
   }
+
+
+.page__wrapper {
+  margin-top:  30px;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  margin: 2px;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+}
+
+.page__current {
+  border: 2px solid rgb(248, 6, 208);
+  font-weight: bold;
+}
