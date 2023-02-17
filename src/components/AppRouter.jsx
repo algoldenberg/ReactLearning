@@ -4,11 +4,13 @@ import About from '../pages/About';
 import Page404 from '../pages/Page 404';
 import {Routes, Route} from "react-router-dom";
 import PostIdPage from '../pages/PostIdPage';
+import Home from '../pages/Home';
 
 
 const AppRouter = () => {
     return ( 
         <Routes>
+        <Route path="/" element={<Home/>} />  
         <Route exact path="posts" element={<Posts />} />
         <Route exact path="posts/:id" element={<PostIdPage />} />
         <Route path="about" element={<About />} />
