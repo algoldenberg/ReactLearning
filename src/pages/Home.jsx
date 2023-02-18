@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/App.css';
+
+
  const Home = () => {
     return ( 
-        <div>
-            <h1>THIS IS HOMEPAGE</h1>
-        </div>
+        <div className='mainBack'></div>
      );
  }
   

@@ -57,35 +57,36 @@ const changePage = (page) => {
 }
 
 return (
-<div className="App">
-  <MyButton style={{marginTop: '30px'}} onClick={handleClick}>
-    Create new Post
-  </MyButton>
-  <MyModal visible={modal} setVisible={setModal}>
-      <PostForm create={createPost}/>
-  </MyModal>
+<div className='mainPage'>
+  <div className="App">
+    <MyButton onClick={handleClick}>
+      Create new Post
+    </MyButton>
+    <MyModal visible={modal} setVisible={setModal}>
+        <PostForm create={createPost}/>
+    </MyModal>
 
-  <hr style={{margin:'15px 0'}}/>
-  <PostFilter 
-  filter={filter}
-  setFilter={setFilter}/>
+    <hr/>
+    <PostFilter
+    filter={filter}
+    setFilter={setFilter}/>
 
-  {postError &&
-    <h1>Something wrong...${postError}</h1>
-  }
+    {postError &&
+      <h1>Something wrong...${postError}</h1>
+    }
 
-  {isPostLoading
-    ?<div style={{display:'flex', justifyContent:'center', marginTop:'50px'}}><Loader/></div>
-    :<PostList remove={removePost} posts={sortedAndSearchedPosts} title="Shopping list"/>
+    {isPostLoading
+      ?<div className='loader'><Loader/></div>
+      :<PostList remove={removePost} posts={sortedAndSearchedPosts} title="Recipes"/>
 
-  }
-  <Pagination 
-  page={page} 
-  changePage={changePage} 
-  totalPages={totalPages}/>
+    }
+    <Pagination 
+    page={page} 
+    changePage={changePage} 
+    totalPages={totalPages}/>
 
+  </div>
 </div>
-
 
 
   );

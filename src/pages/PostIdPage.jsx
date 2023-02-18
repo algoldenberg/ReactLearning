@@ -4,6 +4,7 @@ import {useFetching} from "../hooks/useFetching";
 import PostService from "../API/PostService";
 import Loader from "../components/UI/Loader/Loader";
 import Page404 from './Page 404';
+import '../styles/App.css'
 
 const PostIdPage = () => {
     const params = useParams()
@@ -24,26 +25,24 @@ const PostIdPage = () => {
     }, [])
 
     return (
-        <div>
-            <h1>This is page of post №{params.id}</h1>
+        <div className='postPage'>
+            <h2 className='header'>This is page of post №{params.id}</h2>
             {isLoading
                 ? <Loader/>
-                :  <div>{post.id}. {post.title}. {post.body}</div>
+                :  <div className='postBody'>{post.id}. {post.title}. {post.body}</div>
             }
-            <h1>
+            <h2 className='postBody'>
                 Comments
-            </h1>
-            {isComLoading
-                ? <Loader/>
-                : <div>
+            </h2>
+                <div>
                     {comments.map(comm =>
-                        <div key={comm.id} style={{marginTop: 15}}>
+                        <div className='postBody' key={comm.id} style={{marginTop: 15}}>
                             <h5>{comm.email}</h5>
                             <div>{comm.body}</div>
                         </div>
                     )}
                 </div>
-            }
+                        
         </div>
     );
 };

@@ -10,14 +10,30 @@
     align-items: center;
 }
 
+.mainPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1556910096-6f5e72db6803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
 .App{
     width: 800px;
+    margin-top: 70px;
+    background: rgb(252, 238, 238);
+}
+
+.myButton{
+  margin-top: 50px;
 }
 
 .post{
     display: flex;
     padding: 15px;
-    border: 2px solid blueviolet;
+    border-bottom: 2px solid black;
     margin-top: 15px;
     justify-content: space-between;
     align-items: center;
@@ -51,12 +67,12 @@
 .page {
   margin: 2px;
   padding: 10px;
-  border: 1px solid blueviolet;
+  border: 1px solid black;
   cursor: pointer;
 }
 
 .page__current {
-  border: 2px solid rgb(248, 6, 208);
+  border: 2px solid rgb(128, 129, 125);
   font-weight: bold;
 }
 
@@ -64,11 +80,83 @@
   height: 50px;
   width: 100vw;
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding:  0 15px;
-  background:  gray;
+  background: rgb(252, 238, 238);
+  position: fixed;
 }
 
 .navbar__links {
-  margin-left: auto;
+  margin-top: 10px;
+ display: flex;
+ gap: 10px;
+ font-size: 24px;
+
+}
+
+.navbar_text {
+  text-decoration: none;
+  color: black;
+
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  margin-top:50px;
+}
+
+.mainBack , .about{
+background-image: url(https://images.unsplash.com/photo-1556910096-6f5e72db6803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.textAbout{
+  text-align: center;
+  opacity: 1;
+  padding: 10px 10px;
+  font-size: 24px;
+  color: black;
+}
+
+.infoAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(252, 238, 238);
+  width: 500px;
+  height: 500px;
+  border-radius: 10%;
+}
+
+hr {
+  margin: 15px 0;
+  color: black;
+}
+
+.postPage{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+}
+
+.header{
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.postBody{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
