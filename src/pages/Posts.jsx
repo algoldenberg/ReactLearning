@@ -60,7 +60,7 @@ return (
 <div className='mainPage'>
   <div className="App">
     <MyButton onClick={handleClick}>
-      Create new Post
+      Add new recipe
     </MyButton>
     <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost}/>

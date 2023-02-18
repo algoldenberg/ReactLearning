@@ -10,7 +10,7 @@ import Home from '../pages/Home';
 const AppRouter = () => {
     return ( 
         <Routes>
-        <Route path="/" element={<Home/>} />  
+        <Route path="/" element={<Posts />} />  
         <Route exact path="posts" element={<Posts />} />
         <Route exact path="posts/:id" element={<PostIdPage />} />
         <Route path="about" element={<About />} />

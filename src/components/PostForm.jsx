@@ -22,7 +22,7 @@ const PostForm = ({create}) => {
                 value={post.title} 
                 onChange={e => setPost({...post, title: e.target.value})}
                 type="text" 
-                placeholder='Post name'
+                placeholder='Recipe Name'
             />
         
             <MyInput 
@@ -31,7 +31,7 @@ const PostForm = ({create}) => {
                 type="text" 
                 placeholder='Description'
             />
-            <MyButton onClick={addNewPost}>Create new post</MyButton>
+            <MyButton onClick={addNewPost}>Add new recipe</MyButton>
       </form>
     )
 }
